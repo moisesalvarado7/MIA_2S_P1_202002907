@@ -1,0 +1,33 @@
+<div style="padding-top: 3%">
+    <div class="bg p-4 rounded m-5"> <!-- se borró "dark" de bg-dark-->
+        <div style="padding-left: 2%;padding-right: 2%">
+            <h4 style="color: white; margin-bottom: 1.5%; margin-top: 0.5%;">Entrada:</h4>
+            <textarea class="form-control" id="entradatxtarea" rows="15" [(ngModel)]="entrada"
+                name="entrada"></textarea>
+        </div>
+
+        <div style="padding-top: 1.5%; padding-left: 2%">
+            <input #fileUpload [hidden]="true" type="file" class="file-input" (change)="onFileSelected($event)">
+            <button class="btn btn-outline-success" (click)="fileUpload.click()" style="margin-right: 25px;">
+                <i class="fas fa-file"></i>
+                <span class="ml-2"> Cargar Archivo</span>
+            </button>
+            <button class="btn btn-outline-primary" (click)="ejecutar()" style="margin-right: 25px;">
+                <i class="fas fa-play"></i>
+                <span class="ml-2"> Ejecutar</span>
+            </button>
+            <button class="btn btn-outline-danger" (click)="limpiarConsola()">
+                <i class="fas fa-trash-alt"></i>
+                <span class="ml-2"> Limpiar Consola</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="bg p-4 rounded m-5"> <!-- se borró "dark" de bg-dark-->
+        <div style="padding-left: 2%;padding-right: 2%; padding-bottom: 1%;">
+            <h4 style="color: white; margin-bottom: 1%;">Terminal:</h4>
+            <textarea style="color: green; background: black;" readonly class="form-control" id="salidatxtarea" rows="15"
+                [(ngModel)]="salida" name="salida"></textarea>
+        </div>
+    </div>
+</div>

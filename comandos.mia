@@ -1,0 +1,27 @@
+# RMDISK
+rmdisk -path="/home/moisesalvarado/go/src/MIA_D_LABORATORIO_S2_2024-main/ejemplo7/Discos/A.dsk"
+
+# MKDISK
+mkdisk -size=5 -unit=M -path="/home/moisesalvarado/go/src/MIA_D_LABORATORIO_S2_2024-main/ejemplo7/Discos/A.dsk"
+
+# FDISK
+# Particion 1 (Primaria)
+fdisk -Size=1 -unit=M -path="/home/moisesalvarado/go/src/MIA_D_LABORATORIO_S2_2024-main/ejemplo7/Discos/A.dsk" -name=Particion1
+
+# Particion 1 (Primaria)
+fdisk -Size=1 -unit=M -path="/home/moisesalvarado/go/src/MIA_D_LABORATORIO_S2_2024-main/ejemplo7/Discos/A.dsk" -name=Particion2
+
+# Particion 3 (Primaria)
+fdisk -Size=1 -unit=M -path="/home/moisesalvarado/go/src/MIA_D_LABORATORIO_S2_2024-main/ejemplo7/Discos/A.dsk" -name=Particion3
+
+# Particion 4 (Primaria)   
+fdisk -Size=2 -unit=M -path="/home/moisesalvarado/go/src/MIA_D_LABORATORIO_S2_2024-main/ejemplo7/Discos/A.dsk" -name=Particion4 
+
+# MOUNT
+# Ultimos dos digitos de mi carnet = 30
+# id=071A
+mount -path="/home/moisesalvarado/go/src/MIA_D_LABORATORIO_S2_2024-main/ejemplo7/Discos/A.dsk" -name=Particion1
+
+# REP
+# DISK
+rep -id=071A -Path="/home/moisesalvarado/go/src/MIA_D_LABORATORIO_S2_2024-main/ejemplo7/Reportes/Disk.jpg" -name=disk
